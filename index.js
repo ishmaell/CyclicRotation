@@ -39,7 +39,13 @@ In your solution, focus on correctness. The performance of your solution will no
 
 */
 
-function solution(arr, count) {
+export const solution = (arr, count) => {
+    if(arr == 'undefined' || typeof arr !== 'object') {
+        return 'first parameter must be an array';
+    }
+    if(count <= 0) return "count must be greater than 0"
+
+    if(arr.length < 6) return "length of array in first parameter must be 6";
     while(count > 0) {
         swapIndex(arr);
         count--;
@@ -47,7 +53,7 @@ function solution(arr, count) {
     return arr;
 }
 
-function swapIndex(arr) {
+const swapIndex = (arr) => {
     if(arr.length > 0) {
         let lastIndex = arr.pop();
         arr.unshift(lastIndex);

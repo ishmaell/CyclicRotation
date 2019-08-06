@@ -1,0 +1,31 @@
+{
+  "name": "cyclicrotation",
+  "version": "1.0.0",
+  "description": "Rotate an array to the right by a given number of steps.",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest --watchAll"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ishmaell/CyclicRotation.git"
+  },
+  "keywords": [
+    "algorithms",
+    "array"
+  ],
+  "author": "Isiaka Ismaila",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/ishmaell/CyclicRotation/issues"
+  },
+  "homepage": "https://github.com/ishmaell/CyclicRotation#readme",
+  "devDependencies": {
+    "jest": "^24.8.0"
+  },
+  "dependencies": {
+    "@babel/core": "^7.5.5",
+    "@babel/preset-env": "^7.5.5",
+    "babel-jest": "^24.8.0"
+  }
+}
