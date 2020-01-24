@@ -62,11 +62,13 @@ In your solution, focus on correctness. The performance of your solution will no
 //     return;
 // }
 
-function solution(arr, n) {
-    let newArr = arr.splice(eval(-n));
-    res  = [...newArr, ...arr];
-  
-  return res;
+function cyclicRotation(arr, count) {
+    if(!arr || !Array.isArray(arr)) return 'first parameter must be an array';
+    if(!count || count < 0) return 'count must be greater than 0'
+    let newArr = arr.splice(eval(-count));
+    return [...newArr, ...arr];
 }
 
-console.log(solution([1,2,3,4,5,6], 4)); // returns [ 3, 4, 5, 6, 1, 2 ]
+export default cyclicRotation;
+
+console.log(cyclicRotation([1,2,3,4,5,6], 4)); // returns [ 3, 4, 5, 6, 1, 2 ]
