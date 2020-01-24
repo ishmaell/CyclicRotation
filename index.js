@@ -39,27 +39,34 @@ In your solution, focus on correctness. The performance of your solution will no
 
 */
 
-export const solution = (arr, count) => {
-    if(arr == 'undefined' || typeof arr !== 'object') {
-        return 'first parameter must be an array';
-    }
-    if(count <= 0) return "count must be greater than 0"
+// export const cyclicRotation = (arr, count) => {
+//     if(arr == 'undefined' || typeof arr !== 'object') {
+//         return 'first parameter must be an array';
+//     }
+//     if(count <= 0) return "count must be greater than 0"
 
-    if(arr.length < 6) return "length of array in first parameter must be 6";
-    while(count > 0) {
-        swapIndex(arr);
-        count--;
-    }
-    return arr;
-}
+//     if(arr.length < 6) return "length of array in first parameter must be 6";
+//     while(count > 0) {
+//         swapIndex(arr);
+//         count--;
+//     }
+//     return arr;
+// }
 
-const swapIndex = (arr) => {
-    if(arr.length > 0) {
-        let lastIndex = arr.pop();
-        arr.unshift(lastIndex);
-        return arr;
-    }
-    return;
+// const swapIndex = (arr) => {
+//     if(arr.length > 0) {
+//         let lastIndex = arr.pop();
+//         arr.unshift(lastIndex);
+//         return arr;
+//     }
+//     return;
+// }
+
+function solution(arr, n) {
+    let newArr = arr.splice(eval(-n));
+    res  = [...newArr, ...arr];
+  
+  return res;
 }
 
 console.log(solution([1,2,3,4,5,6], 4)); // returns [ 3, 4, 5, 6, 1, 2 ]

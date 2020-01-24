@@ -1,6 +1,6 @@
-import { solution } from './index';
+import { cyclicRotation } from './index';
 
-describe('Rotate an array to the right by a given number of steps', () => {
+describe('cyclicRotation', () => {
     it('should accept two paramenters', () => {
         expect(solution([1,2,3,4,5,6],4)).toEqual([ 3, 4, 5, 6, 1, 2 ]);
     });
@@ -13,4 +13,4 @@ describe('Rotate an array to the right by a given number of steps', () => {
     it('array length must be greater than or equal to 6', () => {
         expect(solution([1,2,3,4,5], 3)).toEqual('length of array in first parameter must be 6');
     }); 
-})
+});
